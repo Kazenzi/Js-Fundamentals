@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>You can NOT reassign a constant array:</p>
+
+<p id="demo"></p>
+
+<script>
+try {
+ const  cars = ["Saab", "Volvo", "BMW"];
+  cars = ["Toyota", "Volvo", "Audi"];
+}
+catch (err) {
+  document.getElementById("demo").innerHTML = err;
+}
+</script>
+
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant array does NOT make the elements unchangeable:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an Array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Change an element:
+cars[0] = "Toyota";
+
+// Add an element:
+cars.push("Audi");
+
+// Display the Array:
+document.getElementById("demo").innerHTML = cars; 
+</script>
+
+</body>
+</html> -->
+
+
+<!-- dates -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript ISO Dates</h2>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date("2015-03-25");
+document.getElementById("demo").innerHTML = d;
+</script>
+
+</body>
+</html> -->
+
+<!-- 
+Todays date -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+<p>Create a new date object with the current date and time:</p>
+
+<p id="demo"></p>
+
+<script>
+const d = new Date();
+document.getElementById("demo").innerHTML = d.getMonth() + 1;
+</script>
+
+</body>
+</html>
