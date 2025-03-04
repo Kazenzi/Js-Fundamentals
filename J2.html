@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert String to Date</title>
+</head>
+<body>
+
+<h2>Convert a string into a date object.</h2>
+
+<p id="demo"></p>
+
+<script>
+const text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+const obj = JSON.parse(text, function (key, value) {
+    if (key === "birth") {
+        let date = new Date(value);
+        return isNaN(date.getTime()) ? value : date; // Check if date is valid
+    }
+    return value;
+});
+
+// Ensure `obj.birth` is a valid Date before using `.toDateString()`
+const birthDate = obj.birth instanceof Date ? obj.birth.toDateString() : obj.birth;
+
+document.getElementById("demo").innerHTML = `${obj.name}, ${birthDate}`;
+</script>
+
+</body>
+</html>
